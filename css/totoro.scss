@@ -1,0 +1,193 @@
+@import "compass/css3";
+
+//set pixel size
+$pixel-size: 5px;
+
+//pallet
+$t: transparent;
+$u: #836f8f;
+$g: #7f6861;
+$w: #fff;
+$y: #fefdce;
+$b: #222;
+$gr: #7aac4e;
+$dg: darken($g, 10%);
+$r: lighten($u, 20%);
+
+// Define pixel art by line
+// Just list the colors in order
+// and seperate lines with a ","
+
+$blinker:  $t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g $g $t $t $t $t $t $t $t $t $g $g $g $g $g $t $t $t $t $t $t $t,
+	$t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g $g $g $t $t $t $t $t $t $t $t $g $g $g $g $g $g $t $t $t $t $t $t,
+	$t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g $g $g $g $t $t $t $t $t $t $t $t $g $g $g $g $g $g $g $t $t $t $t $t;
+
+$totoro:
+	 $t $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $t $t $t $t $t $t $t $t $t $t $t $t $t $g,
+	 $t $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $t $t $t $t $t $t $t $t $gr $t $t $t $t $g,
+	 $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $t $t $t $t $t $t $gr $t $t $t $t $g $g $g,
+	 $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $t $t $t $t $t $t $gr $t $t $t $t $g $g $g,
+	 $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $t $t $t $t $gr $gr $gr $gr $t $t $t $g $g $g,
+	 $t $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $t $t $t $gr $gr $gr $gr $gr $gr $gr $gr $t $t $g $t,
+	 $t $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $t $t $g $g $g $g $g $g $g $g $g $g $t $g $t,
+	 $t $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $t,
+	 $t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g,
+	 $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g,
+	$t $t $t $t $t $t $t $t $t  $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g,
+	$t $t $t $t $t $t $t $t $t $g $g $g $g $g $w $w $w $g $g $g  $g $g $g $g $g $g $g $g $w $w $w $g $g $g $g $g,
+	$t $t $t $t $t $t $t $t $g $g $g $g $g $w $w $w $w $w $g $g  $g $g $g $g $g $g $g $w $w $w $w $w $g $g $g $g $g,
+	$t $t $t $t $t $t $t $t $g $g $g $g $g $w $w $b $w $w $g $g  $g $g $g $g $g $g $g $w $w $b $w $w $g $g $g $g $g $t,
+	$t $t $t $t $t $t $t $g $g $g $g $g $g $w $w $w $w $w $g $g  $g $g $g $g $g $g $g $w $w $w $w $w $g $g $g $g $g $g $t,
+	$t $t $t $t $t $t $t $g $g $g $g $g $g $g $w $w $w $g $g $g  $b $b $b $b $b $b $g $g $w $w $w $g $g $g $g $g $g $g $t,
+	$t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g  $g $b $b  $b $b $g $g $g $g $g $g $g $g $g $g $g $g $g $g,
+	$t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g  $g $g $b  $b $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g,
+	$t $t $t $t $t $b $b $b $b $g $g $g $g $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $g $g $g $g $b $b $b $b,
+	$t $t $t $t $t $t $g $g $g $b $b $b $g $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $g $b $b $b $g $g $g,
+	$t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g,
+	$t $t $t $t $t $b $b $b $b $b $b $b $b $g $g $g $g $g $g $g  $b $b $b  $b $b $b $g $g $g $g $g $g $g $b $b $b $b $b $b $b,
+	$t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g  $g $b $b  $b $b $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g,
+	$t $t $t $t $t $g $g $g $g $g $b $b $b $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $g $g $b $b $b $g $g $g,
+	$t $t $t $t $b $b $b $b $b $b $g $g $g $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $g $g $g $g $g $b $b $b $b,
+	$t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g,
+	$t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $g $y  $y $y $y  $y $y $y $y $y $g $g $g $g $g $g $g $g $g $g $g $g $g $g,
+	$t $t $t $g $g $g $g $g $g $g $g $g $g $g $g $g $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $g $g $g $g $g $g $g $g $g $g $g,
+	$t $t $t $g $g $g $g $g $g $g $g $g $g $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $g $g $g $g $g $g $g $g,
+	$t $t $g $g $g $g $g $g $g $g $g $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $g $g $g $g $g,
+	$t $t $g $g $g $g $g $g $g $y $y $y $y $y $y $y $y $y $y $y  $y $y $g  $g $g $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $g $g $g,
+	$t $t $g $g $g $g $g $g $g $y $y $y $y $y $y $y $y $g $g $y  $y $g $y  $y $y $g $y $y $g $g $y $y $y $y $y $y $y $y $g $g $g $g $g,
+	$t $t $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $g $y $y $g  $y $y $y  $y $y $y $y $g $y $y $g $y $y $y $y $y $y $y $g $g $dg $g $g,
+	$t $t $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $dg $g $g,
+	$t $t $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $dg $g $g,
+	$t $t $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $y $y $y $y  $y $y $g  $g $g $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $dg $g $g,
+	$t $t $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $y $g $g $y  $y $g $y  $y $y $g $y $y $g $g $y $y $y $y $y $y $y $y $g $g $dg $g $g,
+	$t $g $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $g $y $y $g  $y $y $y  $y $y $y $y $g $y $y $g $y $y $y $y $y $y $y $g $g $dg $g $g $g,
+	$t $g $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $dg $g $g $g,
+	$t $g $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $dg $g $g $g,
+	$t $g $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $dg $g $g $g,
+	$t $g $g $g $dg $g $g $g $g $y $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $dg $g $g $g,
+	$t $g $g $g $dg $g $g $g $g $g $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $g $dg $g $g $g,
+	$t $g $g $g $dg $g $g $g $g $g $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $g $dg $g $g $g,
+	$t $t $g $g $dg $g $g $g $g $g $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $g $dg $g $g $t,
+	$t $t $t $dg $g $g $g $g $g $g $y $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $g $g $dg $t $t,
+	$t $t $t $g $g $g $g $g $g $g $g $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $g $g $g $g $t $t,
+	$t $t $t $g $g $g $g $g $g $g $g $y $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $y $g $g $g $g $g $g $t $t,
+	$t $t $t $g $g $g $g $g $g $g $g $g $y $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $y $g $g $g $g $g $g $g $t $t,
+	$t $t $t $t $g $g $g $g $g $g $g $g $g $y $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $y $g $g $g $g $g $g $g $t $t $t,
+	$t $t $t $t $g $g $g $g $g $g $g $g $g $g $y $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $y $g $g $g $g $g $g $g $g $t $t $t,
+	$t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $y $y $y $y $y  $y $y $y  $y $y $y $y $y $y $y $y $y $g $g $g $g $g $g $g $g $t $t $t $t,
+	$t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $y $y $y  $y $y $y  $y $y $y $y $y $y $y $g $g $g $g $g $g $g $g $g $t $t $t $t $t,
+	$t $t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $y $y $y $y $y  $y $y $y $y $y $y $g $g $g $g $g $g $g $g $g $t $t $t $t $t $t,
+	$t $t $t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $g $g $g $g $g $t $t $t $t $t $t $t,
+	$t $t $t $t $t $t $t $t $t $g $g $g $g $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $g $g $g $g $t $t $t $t $t $t $t $t,
+	$t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $g $g $t $t $t $t $t $t $t $t $t $t,
+	$t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g $g $g  $g $g $g  $g $g $g $g $g $g $g $g $g $t $t $t $t $t $t $t $t $t $t $t $t,
+	$t $t $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $g  $g $t $t  $t $t $g $g $g $g $g $t $t $t $t $t $t $t $t $t $t $t $t $t $t,
+	$t $t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g  $g $g $t  $t $g $g $g $g $g $g $g $t $t $t $t $t $t $t $t $t $t $t $t $t,
+	$t $t $t $t $t $t $t $t $t $t $t $t $t $t $g $g $g $g $g $g  $g $g $t  $t $g $g $g $g $g $g $g $g $t $t $t $t $t $t $t $t $t $t $t $t
+	;
+
+// The mighty pixelmatic
+@mixin pixelmatic($art, $size: 10px){
+	display: block;
+	height: $size;
+	width: $size;
+	$shadow: 0 0 transparent;
+	@for $y from 1 through length($art){
+		@for $x from 1 through length(nth($art, $y)){
+			$shadow: $shadow
+			+ ", " +
+			($x * $size)
+			+ " " +
+			($y * $size)
+			+ " " +
+			nth(nth($art, $y), $x) ;
+		}
+	}
+	box-shadow: unquote($shadow);
+}
+
+.totoro{
+
+	@include pixelmatic($totoro, $pixel-size);
+	position:absolute;
+	left:calc(50% - 115px);
+	top: calc(50% - 160px);
+	z-index:3;
+	&:before, &:after{
+		content:'';
+		position:absolute;
+		top:55px;
+		@include pixelmatic($blinker, $pixel-size);
+		transform:translateY(-15px);
+		animation: blink 4s steps(4, end) infinite alternate;
+		@keyframes blink {
+			0%{
+				transform:translateY(-15px);
+			}
+			95%{
+				transform:translateY(-15px);
+			}
+			100%{
+				transform: translateY(5px);
+			}
+		}
+	}
+	&:after{
+		top:95px;
+		animation: blink2 4s steps(4, end) infinite alternate;
+		@keyframes blink2 {
+			0%{
+				transform:translateY(-15px);
+			}
+			95%{
+				transform:translateY(-15px);
+			}
+			100%{
+				transform: translateY(-30px);
+			}
+		}
+	}
+
+}
+
+html,body{
+	height: 100%;
+	position:relative;
+}
+
+body{
+	background:darken($u, 40%);
+	height:100vh;
+	width:100vw;
+	overflow:hidden;
+	&:before{
+		content:'';
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0%;
+		background:radial-gradient(circle at center, $t, darken($u, 40%) 400px), linear-gradient(to bottom, $t, $t 60%, darken($gr, 35%) 60%);
+		z-index:2;
+	}
+	&:after{
+		content:'';
+		position:absolute;
+		width:100%;
+		height:200%;
+		left:0;
+		top:-100%;
+		z-index:1;
+		opacity:0.25;
+		background:repeating-linear-gradient(to bottom, darken($u, 40%), darken($u, 40%) 20px, $t 20px, $t 30px, darken($u, 40%) 30px), repeating-linear-gradient(to right, $t, $t 25px, lighten($u, 20%) 25px, lighten($u, 20%) 30px, $t 30px);
+		animation:raining 2s linear infinite;
+		@keyframes raining{
+			0%{
+				transform:translateY(0);
+			}
+			100%{
+				transform:translateY(50%);
+			}
+		}
+	}
+}
+

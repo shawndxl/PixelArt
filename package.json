@@ -1,0 +1,11 @@
+{
+  "name": "PixelArt",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {},
+  "scripts": {
+    "debug": "fis3 server start --type php --no-browse -p 8088 && fis3 release debug -c && fis3 release debug -wL"
+  }
+}
